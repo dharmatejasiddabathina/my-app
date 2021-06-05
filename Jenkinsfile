@@ -1,4 +1,14 @@
-node{
+pipeline {
+    agent any
+	stages{
+		stage('checkout'){
+			steps {
+				checkout scm
+			}
+		}
+	}
+}
+/*node{
    stage('SCM Checkout'){
       git 'https://github.com/dharmatejasiddabathina/my-app.git'
    }
@@ -9,6 +19,7 @@ node{
    //sh 'mvn package'
    }
 }
+*/
 
 
 
